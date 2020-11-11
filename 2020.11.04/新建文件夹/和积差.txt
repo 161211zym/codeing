@@ -1,0 +1,27 @@
+﻿class Solution {
+public:
+    int subtractProductAndSum(int n) {
+    int h = 0, j = 1,c = 0;//和 积 差 
+    int x = 0;
+    int i = 10000;
+    for (;i > 0;)
+    {
+        x = n / i;
+        if (x != 0)
+        {
+            break;
+        }
+        i = i / 10;
+    }
+    for (;i > 0;)
+    {
+        x = n / i;
+        h = h + x;
+        j = j * x;
+        n = n % i;
+        i = i / 10;
+    }
+    c = j - h;
+    return c;
+    }
+};

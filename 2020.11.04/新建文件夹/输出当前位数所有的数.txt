@@ -1,0 +1,15 @@
+class Solution {
+public:
+    vector<int> printNumbers(int n) {
+        int board=1;
+        for(int i=0;i<n;i++){
+            board=10*board;
+        }
+        vector<int> num;
+        for(int i=1;i<board;i++){
+            num.push_back(i);
+        }
+        return num;
+
+    }
+};

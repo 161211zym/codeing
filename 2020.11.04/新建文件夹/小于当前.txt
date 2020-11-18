@@ -1,0 +1,24 @@
+﻿class Solution
+{
+public:
+    vector<int> smallerNumbersThanCurrent(vector<int>& nums)
+    {
+        vector<int> ans;
+        int n,i, j, k;
+        n=nums.size();
+        for (i = 0; i < n; i++)
+        {
+            k = 0;
+            for (j = 0; j < n; j++)
+            {
+                if (nums[j] < nums[i])
+                {
+                    k++;
+                }
+
+            }
+            ans.push_back(k);
+        }
+        return ans;
+    }
+};
